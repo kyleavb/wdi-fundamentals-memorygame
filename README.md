@@ -1,2 +1,0 @@
-# wdi-fundamentals-memorygame
-Learning
