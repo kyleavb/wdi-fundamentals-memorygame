@@ -56,6 +56,25 @@ p{
 	font-family: "Raleway", sans-serif;
 	float: right;	
 }
+.attempts{
+	vertical-align: top;
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	color: #0D2C40;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+	float: left;
+}
+.score{
+	font-family: "Raleway", sans-serif;
+	text-transform: uppercase;
+	color: #0D2C40;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+	float: right;
+}
 header{
 	background-color: #F15B31;
 	color: #FFFFFF;
@@ -68,6 +87,10 @@ main{
 }
 img{
 	margin: 40px 8px;
+}
+.heart{
+	margin: auto;
+	vertical-align: middle;
 }
 footer{
 	text-transform: uppercase;
