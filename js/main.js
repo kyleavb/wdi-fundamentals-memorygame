@@ -31,20 +31,25 @@ var checkForMatch = function(){
 	}
 }
 
-var flipCard = function(cardId){
-	console.log("User flipped "+ cards[cardId].rank);
-	console.log("Card Suit: "+ cards[cardId].suit);
-	console.log("Image Location: "+ cards[cardId].cardImage);
+var flipCard = function(){
+	var cardId = this.getAttribute("data-id");
+	this.setAttribute("src", cards[cardId].cardImage);
 	cardsInPlay.push(cards[cardId]);
+	
+
 	if(cardsInPlay.length === 2){
 		checkForMatch();
 	}
-	
 }
 
-var bob = prompt("Number ");
-flipCard(bob);
-var bit = prompt("Number 0-3");
-flipCard(bit);
-
+var createBoard = function(){
+	for(i=0;i<cards.length;i++){
+		cardElement = document.createElement("img");
+		cardElement.setAttribute("src", "images/back.png");
+		cardElement.setAttribute("data-id", i);
+		cardElement.addEventListener("click", flipCard);
+		document.getElementById("game-board").appendChild(cardElement);
+	}
+}
+createBoard();
 
